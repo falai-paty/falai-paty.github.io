@@ -9,6 +9,11 @@ body.custom-background {
     margin-bottom: 7px;
 }
 
+#secondary .widget-title > .fa-star {
+    display: inline;
+    margin-right: 7px;
+}
+
 img.wp-smiley,
 img.emoji {
     display: inline !important;

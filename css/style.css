@@ -5,6 +5,10 @@ body.custom-background {
     background-attachment: scroll;
 }
 
+#secondary > #search-3 > .search-form > .search-field {
+    margin-bottom: 7px;
+}
+
 img.wp-smiley,
 img.emoji {
     display: inline !important;

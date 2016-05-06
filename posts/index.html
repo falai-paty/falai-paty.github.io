@@ -44,14 +44,14 @@
         <div id="content" class="site-content">
             <div id="primary" class="content-area">
                 <main id="main" class="site-main" role="main">
-                    <article id="post-8" class="post-8 post type-post status-publish format-standard hentry category-uncategorized tag-html tag-wordpress">
+                   <article class="post type-post status-publish format-standard hentry category-uncategorized">
                         <header class="entry-header">
-                            <h1 class="entry-title">HTML</h1>
+                            <h1 class="entry-title"><a href="posts/{{ post.id }}" rel="bookmark">{{ post.title }}</a></h1>
                             <div class="entry-meta">
-                                <span class="posted-on"><i class="fa fa-calendar"></i> <a href="https://wp-themes.com/?p=8" rel="bookmark"><time class="entry-date published" datetime="2008-06-21T00:04:53+00:00">June 21, 2008</time><time class="updated" datetime="2008-07-31T02:02:20+00:00">July 31, 2008</time></a></span> </div>
+                                <span class="posted-on"><i class="fa fa-calendar"></i> <a href="#" rel="bookmark"><time class="entry-date published" datetime="{{ post.createdAt }}">{{ post.createdAt }}</time><time class="updated" datetime="{{ post.updatedAt }}">{{ post.updatedAt }}</time></a></span><span class="comments-link">
                         </header>
                         <div class="entry-content">
-                            <p>What HTML tags would you like to see?</p>
+                            <p v-for="paragraph in post.paragraphs">{{ paragraph }}</p>
                         </div>
                         <footer class="entry-footer"></footer>
                     </article>
@@ -141,7 +141,7 @@
     <script type="text/javascript" src="../js/vendor/wp-embed.minec94.js?ver=4.5-beta2-36872"></script>
     <script type="text/javascript" src="../js/vendor/vue/vue.min.js"></script>
     <script type="text/javascript" src="../js/vendor/vue/vue-resource.min.js"></script>
-    <script type="text/javascript" src="../js/controllers/index.js"></script>
+    <script type="text/javascript" src="../js/controllers/post.js"></script>
 </body>
 
 </html>

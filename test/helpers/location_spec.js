@@ -7,7 +7,7 @@ describe('Location', () => {
 		describe('when hash has id', () => {
 			beforeAll(() => location = new Location({hash: '#/post-id'}));
 
-			it('should retrieve a post id', () => expect(location.extractId()).toBe('post-id'));
+			it('should retrieve a id', () => expect(location.extractId()).toBe('post-id'));
 		});
 
 		describe('when hash does not have id', () => {
@@ -22,10 +22,10 @@ describe('Location', () => {
 			it('should retrieve undefined', () => expect(location.extractId()).toBeUndefined());
 		});
 
-		describe('when hash has a incorrect path', function() {
+		describe('when hash has a long path', function() {
 			beforeAll(() => location = new Location({hash: '#/post-id/comments'}));
 
-			it('should retrieve a post id', () => expect(location.extractId()).toBe('post-id'));
+			it('should retrieve a id', () => expect(location.extractId()).toBe('post-id'));
 		});
 	});
 });

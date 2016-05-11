@@ -3,10 +3,9 @@ function Location(values) {
 }
 
 Location.prototype = {
-	extractPostId: function() {
-		var pattern = /(\w|-)+/;
-		var result = pattern.exec(this.values.hash);
+	extractId: function() {
+		var result = /(\w|-)+/.exec(this.values.hash);
 
-		return result[0];
+		return result == null ? undefined : result[0];
 	}
 };
